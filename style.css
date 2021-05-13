@@ -62,6 +62,10 @@ button {
   font-size: 1.6rem;
 }
 
+button:hover {
+  background: var(--cyan);
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -76,6 +80,7 @@ button {
   justify-content: center;
   width: 90%;
   gap: 25px;
+  margin-bottom: 100px;
 }
 
 .features {
@@ -84,6 +89,7 @@ button {
   align-items: center;
   width: 90%;
   gap: 100px;
+  margin-bottom: 100px;
 }
 
 .features div {
@@ -96,4 +102,129 @@ button {
 
 .features img {
   width: 100%;
+}
+
+.learn-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  width: 85%;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+
+.learn-more__image img {
+  width: 300px;
+}
+
+.learn-more__title {
+  align-self: flex-start;
+}
+
+.learn-more__text {
+  align-self: flex-start;
+}
+
+.learn-more__icon a {
+  color: var(--cyan);
+  align-self: flex-start;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.learn-more__icon a:hover {
+  color: var(--white);
+  border-bottom: 1px solid white;
+}
+
+.learn-more__icon {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.learn-more__icon img {
+  height: 15px;
+  width: 15px;
+}
+
+.review {
+  background-image: url(./images/bg-quotes.png);
+  background-repeat: no-repeat;
+  background-position: initial;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+
+.review__comment {
+  background-color: var(--darktestimonials);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.comment__text {
+  font-size: 1.2rem;
+  width: 90%;
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.comment__photo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.comment__photo span {
+  font-size: 1.2rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+.comment__photo img {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.comment__photo p {
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.suscribe {
+  background-color: var(--darkemail);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+}
+
+.suscribe__title {
+  margin-top: 40px;
+}
+
+.suscribe__email {
+  height: 60px;
+  width: 300px;
+  border-radius: 50px;
+  padding-left: 20px;
+}
+
+.suscribe__button {
+  margin-bottom: 40px;
 }
