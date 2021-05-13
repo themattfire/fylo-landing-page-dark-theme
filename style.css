@@ -133,9 +133,13 @@ button:hover {
   border-bottom: 1px solid transparent;
 }
 
-.learn-more__icon a:hover {
+.learn-more__icon:hover a {
   color: var(--white);
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--white);
+}
+
+.learn-more__icon:hover use {
+  fill: var(--white);
 }
 
 .learn-more__icon {
