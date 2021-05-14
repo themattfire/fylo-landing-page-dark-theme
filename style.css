@@ -14,11 +14,11 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {
@@ -30,10 +30,6 @@ body {
   color: var(--white);
   background-color: var(--darkbackground);
   height: 100vh;
-}
-
-img {
-  width: 200px;
 }
 
 h1 {
@@ -54,17 +50,45 @@ h2 {
 
 button {
   background: linear-gradient(90deg, rgba(101, 226, 217, 1) 0%, rgba(51, 158, 204, 1) 100%);
-  width: 300px;
+  width: 320px;
   height: 60px;
   color: var(--white);
   border-radius: 50px;
   font-weight: 700;
   font-size: 1.6rem;
+  border: 0;
 }
 
 button:hover {
   background: var(--cyan);
   cursor: pointer;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  background-color: var(--darkemail);
+  background-size: cover;
+}
+
+.header__logo img {
+  width: 150px;
+}
+
+.header__menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-family: 'Open-Sans', sans-serif;
+}
+
+.header__menu li:hover {
+  border-bottom: 1px solid var(--white);
+  text-shadow: 0 0 white;
 }
 
 .container {
@@ -79,15 +103,31 @@ button:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90%;
+  width: 100vw;
   gap: 25px;
+  background-color: var(--darkemail);
+  background-image: url(./images/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main img {
+  max-width: 90%;
+}
+
+.main__title {
+  max-width: 40%;
+}
+
+.main__text {
+  max-width: 50%;
 }
 
 .features {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
+  width: 80%;
   gap: 100px;
 }
 
@@ -124,6 +164,10 @@ button:hover {
   align-self: flex-start;
 }
 
+.learn-more__text2 {
+  align-self: flex-start;
+}
+
 .learn-more__icon a {
   color: var(--cyan);
   align-self: flex-start;
@@ -154,13 +198,19 @@ button:hover {
 }
 
 .review {
-  background-image: url(./images/bg-quotes.png);
-  background-repeat: no-repeat;
-  background-position: initial;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
+}
+
+.review::before {
+  content: url(./images/bg-quotes.png);
+  display: block;
+  position: relative;
+  top: 37px;
+  right: 120px;
+  transform: scale(0.5);
 }
 
 .review__comment {
@@ -227,6 +277,17 @@ button:hover {
   width: 300px;
   border-radius: 50px;
   padding-left: 20px;
+  border: 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.suscribe__email:focus {
+  outline: 0;
 }
 
 .suscribe__button {
@@ -246,23 +307,23 @@ button:hover {
   margin-top: 300px;
 }
 
-.footer__contact ul {
+.footer__location ul {
   display: inline-block;
   padding: 1rem 2rem;
   max-width: 320px;
 }
 
-.footer__contact ul {
+.footer__location ul {
   list-style: none;
   text-align: left;
 }
 
-.footer__contact ul > li {
+.footer__location ul > li {
   clear: left;
   padding: 0.5rem 0;
 }
 
-.footer__contact ul > li:before {
+.footer__location ul > li:before {
   content: '';
   height: 20px;
   width: 20px;
@@ -271,19 +332,22 @@ button:hover {
   margin-left: -1.5rem;
 }
 
-.footer__contact ul > :nth-child(1):before {
-  background: url('./images/icon-location.svg');
-  background-repeat: no-repeat;
-  margin-right: 20px;
+.mr20 {
+  margin-left: 20px;
 }
 
-.footer__contact ul > :nth-child(2):before {
+.footer__location ul > :nth-child(1):before {
+  background: url('./images/icon-location.svg');
+  background-repeat: no-repeat;
+}
+
+.footer__location ul > :nth-child(2):before {
   background: url('./images/icon-phone.svg');
   background-repeat: no-repeat;
   margin-right: 20px;
 }
 
-.footer__contact ul > :nth-child(3):before {
+.footer__location ul > :nth-child(3):before {
   background: url('./images/icon-email.svg');
   background-repeat: no-repeat;
   margin-right: 20px;
@@ -314,6 +378,7 @@ button:hover {
 .social {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -332,4 +397,132 @@ i.fab {
 i.fab:hover {
   color: var(--cyan);
   border-color: var(--cyan);
+}
+
+@media screen and (min-width: 900px) {
+  .main {
+    background-image: url(./images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+  }
+
+  .header__title {
+    max-width: 50%;
+  }
+  .header__text {
+    max-width: 40%;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px 40px;
+    width: 80%;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .features div {
+    width: 70%;
+  }
+
+  .learn-more {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      'image title'
+      'image text'
+      'image text2'
+      'image button';
+  }
+
+  .learn-more__text {
+    grid-area: 'text';
+  }
+
+  .learn-more__text2 {
+    grid-area: 'text2';
+  }
+
+  .learn-more__title {
+    text-align: left;
+    width: 40%;
+    grid-area: 'title';
+  }
+
+  .learn-more__icon {
+    grid-area: 'button';
+  }
+
+  .learn-more__image {
+    grid-area: image;
+    justify-self: center;
+  }
+
+  .learn-more img {
+    width: 500px;
+  }
+
+  .review {
+    flex-direction: row;
+    width: 75%;
+    margin-bottom: 100px;
+  }
+
+  .review::before {
+    top: -105px;
+    right: -65px;
+    transform: scale(1);
+    z-index: -1;
+  }
+  .suscribe {
+    top: -125px;
+  }
+  .buttons {
+    flex-direction: row;
+  }
+
+  .suscribe__text {
+    width: 45%;
+  }
+
+  .suscribe__email {
+    width: 500px;
+    margin-bottom: 40px;
+  }
+
+  .footer {
+    align-items: flex-start;
+  }
+
+  .footer__logo {
+    margin-left: 100px;
+  }
+
+  .footer__navigation {
+    display: flex;
+    gap: 100px;
+  }
+
+  .footer__navigation li {
+    padding-bottom: 10px;
+  }
+
+  .footer__contact {
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+    gap: 50px;
+    justify-content: space-between;
+    width: 88%;
+  }
+
+  .social {
+    align-items: flex-start;
+  }
 }
