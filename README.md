@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Fylo dark theme landing page](https://your-live-site-url.com)
+- Live Site URL: [Fylo dark theme landing page](https://themattfire.github.io/fylo-landing-page-dark-theme/)
 
 ## My process
 
