@@ -66,7 +66,7 @@ I put my knowledge on css flexbox and grid on practice, also learned about custo
   </ul>
 </div>
 ```
-
+```css
 .footer\_\_location ul > li:before {
 content: '';
 height: 20px;
@@ -75,7 +75,6 @@ display: block;
 float: left;
 margin-left: -1.5rem;
 }
-
 ```
 
 ### Useful resources
