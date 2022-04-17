@@ -1,4 +1,4 @@
-# Frontend Mentor - Fylo dark theme landing page sdjkgnkdsngkfsdgfd changes
+# Frontend Mentor - Fylo dark theme landing page
 
 hew new new
 
